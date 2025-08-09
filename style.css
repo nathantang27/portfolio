@@ -39,6 +39,7 @@ body {
   align-items: center;
   padding: 2rem;
   border-right: 1px solid #e5e7eb;
+  overflow-y: auto;
 }
 
 .profile-pic {
@@ -86,6 +87,76 @@ body {
   font-size: 1.2rem;
   text-decoration: none;
   color: #374151;
+}
+
+/* Education Section */
+.education {
+  margin-top: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.education h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1f2937;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.education h3::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #d1d5db;
+  margin: 0.5rem auto;
+}
+
+.education-item {
+  margin-bottom: 1.2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.education-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.education-item h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.education-item .degree {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.education-item .date {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin: 0.25rem 0;
+}
+
+.education-item .description {
+  font-size: 0.8rem;
+  color: #4b5563;
+  font-style: italic;
+  max-width: 90%;
 }
 
 /* Main content */
