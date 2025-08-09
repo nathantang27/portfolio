@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 body, html {
@@ -28,6 +29,7 @@ body {
   width: 100%;
   min-height: 600px;
   overflow: hidden;
+  position: relative;
 }
 
 /* Sidebar */
@@ -40,6 +42,7 @@ body {
   padding: 2rem;
   border-right: 1px solid #e5e7eb;
   overflow-y: auto;
+  position: relative;
 }
 
 .profile-pic {
@@ -55,6 +58,7 @@ body {
   font-size: 1.75rem;
   font-weight: bold;
   margin-top: 0.5rem;
+  color: #1f2937;
 }
 
 .title {
@@ -87,6 +91,33 @@ body {
   font-size: 1.2rem;
   text-decoration: none;
   color: #374151;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  color: #1f2937;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #374151;
+  transition: transform 0.3s ease;
+  z-index: 10;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* Education Section */
@@ -138,6 +169,7 @@ body {
   font-size: 0.95rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  color: #1f2937;
 }
 
 .education-item .degree {
@@ -182,6 +214,7 @@ body {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  color: #1f2937;
 }
 
 .skill {
@@ -191,6 +224,7 @@ body {
   padding: 0.4rem 0.8rem;
   font-size: 0.85rem;
   margin: 0.2rem 0.4rem 0.2rem 0;
+  color: #374151;
 }
 
 /* Experience Section */
@@ -225,6 +259,7 @@ body {
 .job h4 {
   font-size: 1rem;
   font-weight: 600;
+  color: #1f2937;
 }
 
 .job .date {
@@ -244,6 +279,89 @@ body {
   font-size: 0.85rem;
   color: #4b5563;
   margin-top: 0.5rem;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .container {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .sidebar {
+  background-color: #1e1e1e;
+  border-right-color: #333;
+}
+
+body.dark-mode .content {
+  background-color: #121212;
+}
+
+body.dark-mode .name,
+body.dark-mode .title,
+body.dark-mode .education h3,
+body.dark-mode .core-skills h3,
+body.dark-mode .experience h3,
+body.dark-mode .job h4,
+body.dark-mode .job .company,
+body.dark-mode .education-item h4,
+body.dark-mode .skill-group h4 {
+  color: #ffffff;
+}
+
+body.dark-mode .summary,
+body.dark-mode .description,
+body.dark-mode .education-item .description,
+body.dark-mode .education-item .degree,
+body.dark-mode .contact,
+body.dark-mode .location,
+body.dark-mode .job .date {
+  color: #b0b0b0;
+}
+
+body.dark-mode .social-icon {
+  color: #b0b0b0;
+}
+
+body.dark-mode .social-icon:hover {
+  color: #ffffff;
+}
+
+body.dark-mode .skill {
+  background-color: #333;
+  color: #ffffff;
+}
+
+body.dark-mode .job {
+  border-left-color: #444;
+}
+
+body.dark-mode .job::before {
+  background-color: #444;
+}
+
+body.dark-mode .education h3::after {
+  background-color: #444;
+}
+
+body.dark-mode .theme-toggle {
+  color: #b0b0b0;
+}
+
+body.dark-mode .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .profile-pic {
+  border-color: #ffffff;
+}
+
+body.dark-mode .education-item {
+  border-bottom-color: #333;
 }
 
 /* Responsive */
@@ -266,5 +384,9 @@ body {
 
   .content {
     padding: 2rem;
+  }
+
+  body.dark-mode .sidebar {
+    border-bottom-color: #333;
   }
 }
