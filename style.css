@@ -28,7 +28,7 @@ body {
   max-width: 1000px;
   width: 100%;
   min-height: 600px;
-  overflow: hidden;
+  overflow: hidden; /* Prevent scrolling inside container */
   position: relative;
 }
 
@@ -41,7 +41,8 @@ body {
   align-items: center;
   padding: 2rem;
   border-right: 1px solid #e5e7eb;
-  overflow-y: auto;
+  overflow: hidden; /* Prevent scrolling inside sidebar */
+  height: 100%;     /* Ensure sidebar fills container height */
   position: relative;
 }
 
@@ -352,6 +353,44 @@ body {
   margin-top: 0.5rem;
 }
 
+/* Tools and Hobbies Section */
+.tools, .hobbies {
+  margin-top: 2rem;
+}
+
+.tools h3, .hobbies h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.tools .skill-group, .hobbies .skill-group {
+  margin-bottom: 1rem;
+}
+
+.tools .skill, .hobbies .skill {
+  display: inline-block;
+  background-color: #f3f4f6;
+  border-radius: 9999px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  margin: 0.2rem 0.4rem 0.2rem 0;
+  color: #374151;
+}
+
+/* Dark mode for tools and hobbies */
+body.dark-mode .tools h3,
+body.dark-mode .hobbies h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .tools .skill,
+body.dark-mode .hobbies .skill {
+  background-color: #333;
+  color: #ffffff;
+}
+
 /* Dark Mode Styles */
 body.dark-mode {
   background-color: #121212;
@@ -461,7 +500,7 @@ body.dark-mode .project {
 }
 
 body.dark-mode .project::before {
-  background-color: #444;
+   background-color: #444;
 }
 
 /* Responsive */
