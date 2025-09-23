@@ -194,7 +194,7 @@ body {
 /* Main content */
 .content {
   flex: 1;
-  padding: 2.5rem 3rem;
+  padding: 1.2rem 2rem; /* reduced vertical padding */
   background-color: #f9f9f9;
 }
 
@@ -229,7 +229,7 @@ body {
 
 /* Experience Section */
 .experience {
-  margin-top: 2rem;
+  margin-top: 0.7rem; /* reduced top margin */
 }
 
 .job {
@@ -283,7 +283,7 @@ body {
 
 /* Projects Section */
 .projects {
-  margin-top: 2rem;
+  margin-top: 0.5rem; /* reduced top margin */
 }
 
 .projects h3 {
@@ -354,7 +354,7 @@ body {
 
 /* Tools and Hobbies Section */
 .tools, .hobbies {
-  margin-top: 2rem;
+  margin-top: 0.7rem; /* reduced top margin */
 }
 
 .tools h3, .hobbies h3 {
