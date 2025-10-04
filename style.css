@@ -42,9 +42,9 @@ body {
   align-items: center;
   padding: 2rem;
   border-right: 1px solid #e5e7eb;
-  /* Remove height and overflow for mobile compatibility */
-  height: unset;
-  overflow: unset;
+  /* Remove restrictive height and overflow */
+  height: auto;
+  overflow: visible;
   position: relative;
 }
 
@@ -534,15 +534,20 @@ body.dark-mode .project::before {
     align-items: center;
     overflow: visible;
     height: auto;
-    /* Ensure sidebar content stacks and scrolls if needed */
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: static;
+    /* Allow scrolling if sidebar content exceeds viewport */
+    max-height: none;
   }
 
   .profile-pic {
     width: 90px;
     height: 90px;
     margin-bottom: 0.7rem;
+    /* Ensure image is always visible */
+    object-fit: cover;
+    display: block;
   }
 
   .name {
@@ -575,6 +580,12 @@ body.dark-mode .project::before {
 
   .education {
     margin-top: 1rem;
+    width: 100%;
+    /* Prevent cut-off by allowing wrapping and scrolling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
   }
 
   .education h3 {
