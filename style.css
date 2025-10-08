@@ -512,6 +512,7 @@ body.dark-mode .project::before {
     width: 100vw;
     min-width: 0;
     overflow-x: hidden;
+    overflow-y: auto; /* allow vertical scrolling */
   }
 
   .container {
@@ -523,6 +524,7 @@ body.dark-mode .project::before {
     box-shadow: none;
     overflow: visible;
     min-height: unset;
+    height: auto;
   }
 
   .sidebar {
@@ -532,20 +534,21 @@ body.dark-mode .project::before {
     border-right: none;
     border-bottom: 1px solid #e5e7eb;
     align-items: center;
-    overflow: visible;
-    height: auto;
     display: flex;
     flex-direction: column;
     position: static;
-    /* Allow scrolling if sidebar content exceeds viewport */
-    max-height: none;
+    max-height: 100vh;      /* sidebar fits viewport height */
+    overflow-y: auto;       /* enable vertical scrolling if needed */
+    overflow-x: visible;
+    height: auto;
+    background-color: white;
+    z-index: 2;
   }
 
   .profile-pic {
     width: 90px;
     height: 90px;
     margin-bottom: 0.7rem;
-    /* Ensure image is always visible */
     object-fit: cover;
     display: block;
   }
@@ -572,6 +575,10 @@ body.dark-mode .project::before {
   .socials {
     gap: 0.7rem;
     margin-top: 0.7rem;
+    display: flex;
+    flex-wrap: wrap; /* allow icons to wrap if needed */
+    justify-content: center;
+    width: 100%;
   }
 
   .social-icon {
