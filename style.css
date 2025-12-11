@@ -355,44 +355,6 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Tools and Hobbies Section */
-.tools, .hobbies {
-  margin-top: 0.7rem; /* reduced top margin */
-}
-
-.tools h3, .hobbies h3 {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #1f2937;
-}
-
-.tools .skill-group, .hobbies .skill-group {
-  margin-bottom: 1rem;
-}
-
-.tools .skill, .hobbies .skill {
-  display: inline-block;
-  background-color: #f3f4f6;
-  border-radius: 9999px;
-  padding: 0.4rem 0.8rem;
-  font-size: 0.85rem;
-  margin: 0.2rem 0.4rem 0.2rem 0;
-  color: #374151;
-}
-
-/* Dark mode for tools and hobbies */
-body.dark-mode .tools h3,
-body.dark-mode .hobbies h3 {
-  color: #ffffff;
-}
-
-body.dark-mode .tools .skill,
-body.dark-mode .hobbies .skill {
-  background-color: #333;
-  color: #ffffff;
-}
-
 /* Dark Mode Styles */
 body.dark-mode {
   background-color: #121212;
@@ -622,15 +584,13 @@ body.dark-mode .project::before {
 
   .projects,
   .experience,
-  .tools,
-  .hobbies {
+  .tools{
     margin-top: 0.5rem;
   }
 
   .projects h3,
   .experience h3,
-  .tools h3,
-  .hobbies h3 {
+  .tools h3 {
     font-size: 1rem;
     margin-bottom: 0.7rem;
   }
@@ -663,8 +623,7 @@ body.dark-mode .project::before {
     font-size: 0.75rem;
   }
 
-  .tools .skill,
-  .hobbies .skill {
+  .tools .skill {
     font-size: 0.7rem;
     padding: 0.2rem 0.5rem;
     margin: 0.1rem 0.2rem 0.1rem 0;
